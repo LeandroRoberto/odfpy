@@ -18,24 +18,25 @@
 # Contributor(s):
 #
 
-import platform
 from distutils.core import setup
+import platform
 
-version = '1.3.2dev'
 
-if platform.system() in ('Linux','Unix'):
+version = '1.3.3dev'
+
+if platform.system() in ('Linux', 'Unix'):
     man1pages = [('share/man/man1', [
-           'csv2ods/csv2ods.1',
-           'mailodf/mailodf.1',
-           'odf2xhtml/odf2xhtml.1',
-           'odf2mht/odf2mht.1',
-           'odf2xml/odf2xml.1',
-           'odfimgimport/odfimgimport.1',
-           'odflint/odflint.1',
-           'odfmeta/odfmeta.1',
-           'odfoutline/odfoutline.1',
-           'odfuserfield/odfuserfield.1',
-           'xml2odf/xml2odf.1'])]
+        'csv2ods/csv2ods.1',
+        'mailodf/mailodf.1',
+        'odf2xhtml/odf2xhtml.1',
+        'odf2mht/odf2mht.1',
+        'odf2xml/odf2xml.1',
+        'odfimgimport/odfimgimport.1',
+        'odflint/odflint.1',
+        'odfmeta/odfmeta.1',
+        'odfoutline/odfoutline.1',
+        'odfuserfield/odfuserfield.1',
+        'xml2odf/xml2odf.1'])]
 else:
     man1pages = []
 # Currently no other data files to add
@@ -43,26 +44,26 @@ datafiles = [] + man1pages
 
 setup(name='odfpy',
       version=version,
-      classifiers = [
-        'Development Status :: 5 - Production/Stable',
-        'Environment :: Console',
-        'Intended Audience :: End Users/Desktop',
-        'Intended Audience :: Developers',
-        'Intended Audience :: System Administrators',
-        'License :: OSI Approved :: Apache Software License',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
-        'Operating System :: MacOS :: MacOS X',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: POSIX',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 3',
-        'Topic :: Office/Business',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+      classifiers=[
+          'Development Status :: 5 - Production/Stable',
+          'Environment :: Console',
+          'Intended Audience :: End Users/Desktop',
+          'Intended Audience :: Developers',
+          'Intended Audience :: System Administrators',
+          'License :: OSI Approved :: Apache Software License',
+          'License :: OSI Approved :: GNU General Public License (GPL)',
+          'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
+          'Operating System :: MacOS :: MacOS X',
+          'Operating System :: Microsoft :: Windows',
+          'Operating System :: POSIX',
+          'Programming Language :: Python :: 2',
+          'Programming Language :: Python :: 3',
+          'Topic :: Office/Business',
+          'Topic :: Software Development :: Libraries :: Python Modules',
       ],
       description='Python API and tools to manipulate OpenDocument files',
-      long_description = (
-"""
+      long_description=(
+          """
 Odfpy is a library to read and write OpenDocument v. 1.2 files.
 The main focus has been to prevent the programmer from creating invalid
 documents. It has checks that raise an exception if the programmer adds
@@ -92,7 +93,7 @@ The source code is at https://github.com/eea/odfpy
 Visit https://github.com/eea/odfpy/wiki for documentation and examples.
 
 The code at https://joinup.ec.europa.eu/software/odfpy/home is obsolete."""
-),
+      ),
       author='Soren Roug',
       author_email='soren.roug@eea.europa.eu',
       url='https://github.com/eea/odfpy',
